@@ -1,0 +1,12 @@
+CREATE TABLE `bankform` (
+  `bankFormId` int NOT NULL AUTO_INCREMENT,
+  `debtorFormId` int NOT NULL,
+  `accountNumber` bigint NOT NULL,
+  `bankName` varchar(45) NOT NULL,
+  `branchName` varchar(45) NOT NULL,
+  `swiftAddress` varchar(45) NOT NULL,
+  `accountCurrency` varchar(20) NOT NULL,
+  PRIMARY KEY (`bankFormId`),
+  KEY `debtorFormId_idx` (`debtorFormId`),
+  CONSTRAINT `debtorFormId` FOREIGN KEY (`debtorFormId`) REFERENCES `debtorform` (`debtorFormId`) ON DELETE CASCADE ON UPDATE CASCADE
+);
