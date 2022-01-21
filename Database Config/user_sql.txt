@@ -1,0 +1,7 @@
+CREATE TABLE `user` (
+  `username` varchar(30) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `uid` varchar(40) NOT NULL,
+  PRIMARY KEY (`username`),
+  UNIQUE KEY `uid` (`uid`)
+);
