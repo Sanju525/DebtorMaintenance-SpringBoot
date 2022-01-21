@@ -1,0 +1,13 @@
+CREATE TABLE `debtorform` (
+  `debtorFormId` int NOT NULL AUTO_INCREMENT,
+  `debtorId` varchar(40) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `address1` varchar(45) NOT NULL,
+  `address2` varchar(45) DEFAULT NULL,
+  `fax` int DEFAULT NULL,
+  `phone` bigint DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`debtorFormId`),
+  KEY `debtorId` (`debtorId`),
+  CONSTRAINT `debtorId` FOREIGN KEY (`debtorId`) REFERENCES `user` (`uid`) ON DELETE CASCADE ON UPDATE CASCADE
+);
