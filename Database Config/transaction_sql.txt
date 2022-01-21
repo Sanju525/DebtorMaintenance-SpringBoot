@@ -1,0 +1,10 @@
+CREATE TABLE `transaction` (
+  `transactionId` varchar(60) NOT NULL,
+  `bankFormId` int NOT NULL,
+  `date_time` datetime NOT NULL,
+  `status` varchar(1) NOT NULL,
+  `information` varchar(45) NOT NULL,
+  PRIMARY KEY (`transactionId`),
+  KEY `bankFormId_idx` (`bankFormId`),
+  CONSTRAINT `bankFormId` FOREIGN KEY (`bankFormId`) REFERENCES `bankform` (`bankFormId`) ON DELETE CASCADE ON UPDATE CASCADE
+);
