@@ -1,0 +1,19 @@
+body{
+    background-color:hsla(89, 43%, 51%, 0.3);
+}
+.wrapper{
+    margin:80px;
+}
+.form-signin{
+    max-width:600px;
+    margin:0 auto;
+    background-color:#FFFFFF;
+    border:1px solid #e5e5e5;
+    border-radius:10px;
+}
+.form-group{
+    margin-top:30px;
+}
+.body{
+    margin: auto;
+}
